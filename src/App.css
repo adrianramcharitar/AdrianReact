@@ -53,6 +53,23 @@ ul{
   padding: 5px;
 }
 
+.author-text{
+  transition: .5s ease;
+  opacity: 1;
+  color: white;
+  font-size: 30px;
+  transform: translateY(-150px); 
+   -ms-transform: translateY(-150px); 
+  text-align: center;
+  background-color: darkgray;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ind-photo:hover .author-text{
+  opacity: 1;
+} 
+
 
 
 

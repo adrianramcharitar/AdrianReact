@@ -25,7 +25,7 @@ class App extends React.Component {
 
   fetchPhotos = term => {
     fetch(
-      `https://api.unsplash.com/search/photos?page=1&query=${term}&client_id=${API_KEY}`
+      `https://api.unsplash.com/search/photos?page=1&query=${term}&orientation=landscape&client_id=${API_KEY}`
     )
       .then(resp => {
         return resp.json();
