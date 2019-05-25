@@ -1,8 +1,9 @@
-import React from "react";
-import SearchBar from "./components/SearchBar"
-import "./App.css";
+import React from 'react';
+import SearchBar from './components/SearchBar';
+import PhotoList from './components/PhotoList';
+import './App.css';
 
-const API_KEY = "";
+const API_KEY = 'ebbbf8984faf6f8ec2e4fc284d1b62abe6e096a682d646b471178c0bec22e3c2';
 
 class App extends React.Component {
   constructor(props) {
@@ -54,6 +55,7 @@ class App extends React.Component {
     return(
       <div>
         <SearchBar changeSearchTermState={this.changeSearchTermState} value={this.state.term} />
+        <PhotoList photos={this.state.photos} />
       </div>
     );
   }
