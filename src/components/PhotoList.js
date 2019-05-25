@@ -7,7 +7,10 @@ const PhotoList = props => {
     return <PhotoListItem key={UUID()} url={pic.urls.small} />;
   });
 
-  return <ul>{photoItems}</ul>;
-};
+  return(
+  <div className ="photo-list">
+     {photoItems}
+  </div>
+  )};
 
 export default PhotoList;

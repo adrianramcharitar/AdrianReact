@@ -54,6 +54,7 @@ class App extends React.Component {
   render() {
     return(
       <div>
+        <h1>Unsplash Photo Search</h1>
         <SearchBar changeSearchTermState={this.changeSearchTermState} value={this.state.term} />
         <PhotoList photos={this.state.photos} />
       </div>

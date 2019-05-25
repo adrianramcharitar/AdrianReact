@@ -1,33 +1,66 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background: #c2e59c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }
 
-.App-link {
-  color: #61dafb;
+h1{
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul{
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
+
+.search-box{
+ 
+  width: 300px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('./img/searchicon.png');
+  background-position: 20px 20px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+
+}
+
+.search-box:focus{
+  width: 80%
+}
+
+.photo-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+
+}
+
+.ind-photo:hover{
+  opacity: 0.3;
+}
+
+.ind-photo{
+  padding: 5px;
+}
+
+
+
+
+
+ul{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+

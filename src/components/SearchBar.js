@@ -2,7 +2,8 @@ import React from 'react';
 
 const SearchBar = props => {
   return (
-    <form>
+    <div>
+    <form className="search-container">
       <input
         className="search-box"
         onChange={props.changeSearchTermState}
@@ -11,6 +12,7 @@ const SearchBar = props => {
         value={props.term}
       />
     </form>
+    </div>
   );
 };
 

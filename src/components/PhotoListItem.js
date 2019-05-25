@@ -2,8 +2,8 @@ import React from "react";
 
 const PhotoListItem = props => {
   return (
-    <div>
-      <img src={props.url} />
+    <div className='ind-photo'>
+      <img src={props.url} alt="search results" />
     </div>
   );
 };
