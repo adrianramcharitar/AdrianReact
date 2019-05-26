@@ -2,8 +2,9 @@ import React from 'react';
 
 const SearchBar = props => {
   return (
-    <div>
-    <form className="search-container">
+    <div className="search-container">
+    <form >
+      
       <input
         className="search-box"
         onChange={props.changeSearchTermState}
@@ -11,6 +12,7 @@ const SearchBar = props => {
         placeholder="Search Photos"
         value={props.term}
       />
+     
     </form>
     </div>
   );

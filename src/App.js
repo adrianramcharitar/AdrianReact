@@ -1,9 +1,10 @@
-import React from 'react';
-import SearchBar from './components/SearchBar';
-import PhotoList from './components/PhotoList';
-import './App.css';
+import React from "react";
+import SearchBar from "./components/SearchBar";
+import PhotoList from "./components/PhotoList";
+import "./App.css";
 
-const API_KEY = 'ebbbf8984faf6f8ec2e4fc284d1b62abe6e096a682d646b471178c0bec22e3c2';
+const API_KEY =
+  "ebbbf8984faf6f8ec2e4fc284d1b62abe6e096a682d646b471178c0bec22e3c2";
 
 class App extends React.Component {
   constructor(props) {
@@ -16,8 +17,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+   // this.randomPhoto();
+   
     if (this.state.term !== "") {
       this.fetchPhotos(this.state.term);
+      
     } else {
       this.fetchPhotos("react");
     }
@@ -33,7 +37,18 @@ class App extends React.Component {
       .then(data => {
         this.setState({
           photos: data.results
-        
+        });
+      });
+  };
+
+  randomPhoto = () => {
+    fetch(`https://api.unsplash.com/photos/random?count=5&client_id=${API_KEY}`)
+      .then(resp => {
+        return resp.json();
+      })
+      .then(data => {
+        this.setState({
+          photos: data.results
         });
       });
   };
@@ -45,17 +60,26 @@ class App extends React.Component {
       },
       () => {
         this.state.term === ""
-          ? this.fetchPhotos("coding")
+         // ? this.fetchPhotos("react")
+        ? this.randomPhoto()
           : this.fetchPhotos(this.state.term);
       }
     );
+    console.log(this.state);
   };
 
   render() {
-    return(
+    if (this.state.photos === []) {
+      throw new Error("Error Retreiving Photos");
+    }
+
+    return (
       <div>
         <h1>Unsplash Photo Search</h1>
-        <SearchBar changeSearchTermState={this.changeSearchTermState} value={this.state.term} />
+        <SearchBar
+          changeSearchTermState={this.changeSearchTermState}
+          value={this.state.term}
+        />
         <PhotoList photos={this.state.photos} />
       </div>
     );

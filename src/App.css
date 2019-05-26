@@ -18,6 +18,30 @@ ul{
   flex-wrap: wrap;
 }
 
+.btn-random{
+  display:inline-block;
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-size: 16px;
+  font-weight:700;
+  color:#FFFFFF;
+  background-color:#4eb5f1;
+  text-align:center;
+  transition: all 0.2s;
+}
+
+.btn-random:hover{
+  background-color:#4095c6;
+}
+
+.search-container{
+  margin: 0 auto;
+  width: 570px; 
+}
+
 .search-box{
  
   width: 300px;
@@ -35,7 +59,7 @@ ul{
 }
 
 .search-box:focus{
-  width: 80%
+  width: 100%
 }
 
 .photo-list{
@@ -55,10 +79,10 @@ ul{
 
 .author-text{
   transition: .5s ease;
-  opacity: 1;
+  opacity: 0.9;
   color: white;
-  font-size: 30px;
-  transform: translateY(-150px); 
+  font-size: 25px;
+  transform: translateY(-80px); 
    -ms-transform: translateY(-150px); 
   text-align: center;
   background-color: darkgray;
@@ -66,13 +90,10 @@ ul{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.ind-photo:hover .author-text{
+
+.ind-photo:hover > div.author-text{
   opacity: 1;
-} 
-
-
-
-
+}
 
 ul{
   display: flex;
