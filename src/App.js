@@ -21,7 +21,6 @@ class App extends React.Component {
    
     if (this.state.term !== "") {
       this.fetchPhotos(this.state.term);
-      
     } else {
       this.fetchPhotos("react");
     }
@@ -60,8 +59,7 @@ class App extends React.Component {
       },
       () => {
         this.state.term === ""
-         // ? this.fetchPhotos("react")
-        ? this.randomPhoto()
+          ? this.fetchPhotos("react")
           : this.fetchPhotos(this.state.term);
       }
     );

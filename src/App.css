@@ -1,21 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(https://fonts.googleapis.com/css?family=Squada+One);
+
 body{
-  justify-content: center;
-  align-items: center;
-  background: #c2e59c;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  width: 100wh;
+	height: 90vh;
+	color: #fff;
+  background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
 }
 
+/*
 h1{
   text-align: center;
   font-family: 'Nunito', sans-serif;
   font-size: 50px;
 }
-
+*/
 ul{
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  position: relative;
+}
+
+h1:after {
+  background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
+  background-size: 4px 4px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -5;
+  display: block;
+  text-shadow: none;
 }
 
 .btn-random{
