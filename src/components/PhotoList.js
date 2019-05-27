@@ -7,7 +7,7 @@ const PhotoList = props => {
     return(
       <div className="photo-group">
      <PhotoListItem key={UUID()} url={pic.urls.small} />
-     <p className="author-text">{pic.user.username}</p>
+     <p className="author-text">By: {pic.user.username}</p>
      </div>
     )
   });
